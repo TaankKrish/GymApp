@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/item1"
+        android:icon="@drawable/home_svgrepo_com__2_"/>
+
+    <item android:title="Plans"
+        android:id="@+id/item2"
+        android:icon="@drawable/money_svgrepo_com"/>
+
+    <item android:title="Gallery"
+        android:id="@+id/item3"
+        android:icon="@drawable/gallery_svgrepo_com"/>
+
+    <item android:title="Contact"
+        android:id="@+id/item4"
+        android:icon="@drawable/phone_svgrepo_com__1_"/>
+
+</menu>
