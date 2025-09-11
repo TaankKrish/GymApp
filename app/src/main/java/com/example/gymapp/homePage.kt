@@ -34,6 +34,9 @@ class homePage : AppCompatActivity() {
             when(it.itemId){
                 R.id.item1 -> replaceWithFragment(Home())
                 R.id.item2 -> replaceWithFragment(Plans())
+                R.id.item3 -> replaceWithFragment(Gallery())
+                R.id.item4 -> replaceWithFragment(Contact())
+
             }
             true
         }
