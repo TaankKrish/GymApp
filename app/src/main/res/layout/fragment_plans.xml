@@ -1,146 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Plans">
+    android:padding="16dp"
+    android:background="@color/white">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white">
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Membership Plans"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
-        <TextView
-            android:id="@+id/textView6"
+    <!-- CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/membershipCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="5dp"
+        app:layout_constraintTop_toBottomOf="@id/titleMembership"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Membership Plans"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="20dp"
-            android:textSize="20sp"/>
+            android:padding="16dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="371dp"
-            android:layout_height="260dp"
-            android:layout_gravity="center"
-            android:elevation="10dp"
-            app:cardCornerRadius="20dp">
-
+            <!-- Plan Title -->
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/planTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
                 android:text="Monthly Thrive"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
+            <!-- Price -->
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/planPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="50dp"
                 android:text="$49.99"
+                android:textSize="20sp"
+                android:textStyle="bold"
                 android:textColor="@color/green"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+                app:layout_constraintTop_toBottomOf="@id/planTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
 
+            <!-- per month -->
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/perMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="90dp"
                 android:text="per month"
-                android:textColor="#686060" />
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintStart_toEndOf="@id/planPrice"
+                app:layout_constraintBottom_toBottomOf="@id/planPrice"
+                android:layout_marginStart="8dp"/>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="110dp"
-                    android:src="@drawable/tick_svgrepo_com" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="120dp"
-                    android:text="Full Gym Access"
-                    android:textSize="17dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="135dp"
-                    android:src="@drawable/tick_svgrepo_com" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="141dp"
-                    android:text="Group Classes"
-                    android:textSize="17dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="247dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="160dp"
-                    android:src="@drawable/tick_svgrepo_com" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="165dp"
-                    android:text="Nutritional Guide"
-                    android:textSize="17dp" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="329dp"
+            <!-- Feature 1 -->
+            <TextView
+                android:id="@+id/feature1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="200dp"
+                android:text="✔ Full Gym Access"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/planPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Feature 2 -->
+            <TextView
+                android:id="@+id/feature2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✔ Group Classes"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/feature1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Feature 3 -->
+            <TextView
+                android:id="@+id/feature3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✔ Nutritional Guide"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/feature2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Subscribe Button -->
+            <Button
+                android:id="@+id/subscribeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
                 android:backgroundTint="@color/green"
-                android:text="Subscribe" />
+                app:cornerRadius="30dp"
+                app:layout_constraintTop_toBottomOf="@id/feature3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
 
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-
-    </LinearLayout>
-
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
