@@ -1,10 +1,15 @@
 package com.example.gymapp
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.cardview.widget.CardView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +40,48 @@ class Contact : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_contact, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val callbtn = view.findViewById<CardView>(R.id.cardCall)
+        val whatsAppbtn = view.findViewById<CardView>(R.id.cardWhatsapp)
+        val instagrambtn = view.findViewById<CardView>(R.id.cardInstagram)
+        val locationbtn = view.findViewById<CardView>(R.id.cardLocation)
+
+        callbtn.setOnClickListener {
+            val num = 9874563210
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:$num")
+            startActivity(intent)
+        }
+
+        whatsAppbtn.setOnClickListener {
+            val num = 9667220664
+            val url = "https://wa.me/$num"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
+
+        instagrambtn.setOnClickListener {
+            val uri = Uri.parse("https://instagram.com/fitnessfirstindia")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            intent.setPackage("com.intagram.android")
+            try {
+                startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://instagram.com/fitnessfirstindia")))
+            }
+        }
+
+        locationbtn.setOnClickListener {
+            val uri = "https://www.google.com/maps/place/fitness1st/@28.7738233,77.1181254,330m/data=!3m1!1e3!4m15!1m8!3m7!1s0x390d00b85d419375:0x91a298880a1bf556!2sKhera+Kalan,+Delhi!3b1!8m2!3d28.7722431!4d77.1185872!16s%2Fg%2F11gcx0f1l2!3m5!1s0x390d012f4e2f5ccd:0xba2bcb0903b9db51!8m2!3d28.7747407!4d77.1175249!16s%2Fg%2F11s2shyywy?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(uri)
+            startActivity(intent)
+        }
     }
 
     companion object {
