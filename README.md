@@ -26,16 +26,16 @@ The app includes contact options like **Call**, **WhatsApp**, **Location**, and 
 ## 📸 Screenshots
 
 ### Splash Screen  
-<img src="screenshot/splash%20screen.png.png" alt="Splash Screen" width="250">
+<img src="screenshot/splash%20screen.png" alt="Splash Screen" width="250">
 
 ### Home Page  
 <img src="screenshot/home.png" alt="Home Page" width="250"/>
 
 ### Plans Page
-<img src="screenshot/plans.png.png" alt="Plans Page" width="250"/>
+<img src="screenshot/plans.p" alt="Plans Page" width="250"/>
 
 ### Gallery Page
-<img src="screenshot/gallery.png.png" alt="Gallery Page" width="250"/>
+<img src="screenshot/gallery.png" alt="Gallery Page" width="250"/>
 
 ### Contact Page
-<img src="screenshot/contact.png.png" alt="Contact Page" width="250"/>
+<img src="screenshot/contact.png" alt="Contact Page" width="250"/>
