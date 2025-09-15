@@ -32,7 +32,7 @@ The app includes contact options like **Call**, **WhatsApp**, **Location**, and 
 <img src="screenshot/home.png" alt="Home Page" width="250"/>
 
 ### Plans Page
-<img src="screenshot/plans.p" alt="Plans Page" width="250"/>
+<img src="screenshot/plans.png" alt="Plans Page" width="250"/>
 
 ### Gallery Page
 <img src="screenshot/gallery.png" alt="Gallery Page" width="250"/>
